@@ -69,7 +69,70 @@
               >
             </div>
             <div>
-              hihi
+              <div class="total_payment">
+                <h4>Your total payment will be</h4>
+                <span>On Demand</span>
+                <div class="payment">
+                  <div class="price">
+                    $2,866.71
+                  </div>
+
+                  <div style="	line-height: 45px;">
+                    Details
+                  </div>
+                </div>
+                <span style="color:blue">Technical Specs</span><br />
+                <div style="margin:16px 0 16px 0">
+                  <span>Cluster capacity</span>
+                </div>
+
+                <div class="cluster_capacity">
+                  <div
+                    v-for="(item, index) in ClusterCapacity"
+                    :key="index"
+                    class="cluster_capacity_common"
+                  >
+                    <div class="storage">
+                      <span>{{ item.text }} </span>
+                    </div>
+
+                    <div class="cluster_capacity_value">
+                      <div
+                        style="font-weight:900;display: inline-block;font-size:12px"
+                      >
+                        {{ item.value }}
+                      </div>
+                      {{ item.ops }}
+                    </div>
+                  </div>
+                </div>
+                <div style="margin:16px 0 16px 0">
+                  <span>Cluster specs</span>
+                </div>
+
+                <div class="cluster_capacity">
+                  <div
+                    v-for="(item, index) in ClusterSpecs"
+                    :key="index"
+                    class="cluster_capacity_common"
+                  >
+                    <div class="storage">
+                      <span>{{ item.text }} </span>
+                    </div>
+
+                    <div>
+                      <div
+                        style="font-weight:900;display: inline-block;font-size:12px"
+                      >
+                        {{ item.value }}
+                      </div>
+                      <div style="display: inline-block;font-size:12px">
+                        {{ item.ops }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </el-card>
         </el-col>
@@ -79,10 +142,16 @@
 </template>
 
 <script>
-import { calculator } from "@/components/mockApi/data";
+import {
+  calculator,
+  ClusterCapacity,
+  ClusterSpecs
+} from "@/components/mockApi/data";
 export default {
   data() {
     return {
+      ClusterSpecs: ClusterSpecs,
+      ClusterCapacity: ClusterCapacity,
       calculator: calculator,
       value2: 50,
       value1: false

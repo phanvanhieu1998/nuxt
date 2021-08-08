@@ -3,6 +3,7 @@
     <ScyllaCound></ScyllaCound>
     <ScyllaCloudPricing></ScyllaCloudPricing>
     <Calculator />
+    <Footer></Footer>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import ScyllaCound from "@/components/content/SectionScyllaCloud.vue";
 import ScyllaCloudPricing from "@/components/content/ScyllaCloudPricing.vue";
 import Calculator from "@/components/content/Calculator.vue";
+import Footer from "@/components/content/Footer.vue";
 export default {
   data() {
     return {};
@@ -17,7 +19,8 @@ export default {
   components: {
     ScyllaCound,
     ScyllaCloudPricing,
-    Calculator
+    Calculator,
+    Footer
   }
 };
 </script>

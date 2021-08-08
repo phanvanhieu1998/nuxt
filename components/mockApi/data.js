@@ -106,10 +106,46 @@ let listNavigation = [
   }
 ];
 
+let ClusterCapacity = [
+  {
+    text: "Storage (post replication)",
+    value: 950,
+    ops: "GB"
+  },
+  {
+    text: "Sustained throughput	",
+    value: "47,520",
+    ops: "ops/sec"
+  },
+  {
+    text: "Peak throughput",
+    value: "72,000 ",
+    ops: "ops/sec"
+  }
+];
+
+let ClusterSpecs = [
+  {
+    text: "Nodes",
+    value: "3 x i3.2xlarge",
+    ops: "(8 vCPUs, 61GB RAM, 1,900GB storage)"
+  },
+  {
+    text: "Total raw storage",
+    value: "5,700",
+    ops: "GB"
+  },
+  {
+    text: "Total vCPU	",
+    value: "24"
+  }
+];
 export {
   calculator,
   listOverview,
   listInfomation,
   buttonNavigation,
-  listNavigation
+  listNavigation,
+  ClusterCapacity,
+  ClusterSpecs
 };
